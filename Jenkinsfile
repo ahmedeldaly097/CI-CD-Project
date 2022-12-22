@@ -1,23 +1,24 @@
 pipeline {
     agent any
 
-    environment {
-		DOCKERHUB_CREDENTIALS=credentials('dockerhub')
-	}
     stages {
-        stage('Docker Login') {
+        stage('build') {
             steps {
-                // Add --password-stdin to run docker login command non-interactively
-                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+                sh 'docker build -t ahmedeldaly097/web_app .'
             }
         }
-        stage('Build & push Dockerfile') {
+        stage('artifact') {
             steps {
-                sh """
-                cd Simple-Project/
-                ansible-playbook ansible-playbook.yml
-                """
+                withCredentials([usernamePassword(credentialsId: 'DockerHub', passwordVariable: 'pass', usernameVariable: 'username')]){
+                sh 'docker login -u ${username} -p ${pass}'
+                sh 'docker push ahmedeldaly097/web_app'
+            }
+           }
+        }
+        stage('deploy') {
+            steps {
+                sh 'docker run -d -p 5000:80 --name web_app ahmedeldaly097/web_app'
             }
         }
-    } 
+    }
 }
