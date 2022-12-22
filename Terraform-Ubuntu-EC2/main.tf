@@ -1,7 +1,7 @@
 resource "aws_instance" "ubuntu-instance" {
   ami           = var.ami
-  instance_type = "t2.medium"
-  key_name      = "mykey"
+  instance_type = "t2.micro"
+  key_name      = "ahmed"
   security_groups = ["${aws_security_group.UbuntuSG.name}"]
 
   tags  = {

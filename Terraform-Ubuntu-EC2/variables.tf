@@ -1,11 +1,11 @@
 variable "region" {
   type    = string 
-  description = "Region added in tfvars"
+  default = "us-east-1"
 }
 
 variable "ami" {
   type    = string 
-  description = "ami added in tfvars"
+  default = "ami-0574da719dca65348"
 }
 
 variable "public_key" {
