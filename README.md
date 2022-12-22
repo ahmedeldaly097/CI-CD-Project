@@ -14,7 +14,7 @@ terraform apply
 ---
 ## Step 2:
 ### Install Docker, Jenkins and other dependencies
-# SSH to the EC2 using the keypair, Install Docker and Install Jenkins image
+#### SSH to the EC2 using the keypair, Install Docker and Install Jenkins image
 1. [Install Docker on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 2. [Downloading and building Jenkins in Docker](https://www.jenkins.io/doc/book/installing/docker/)
 ```
