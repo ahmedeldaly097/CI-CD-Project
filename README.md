@@ -48,4 +48,9 @@ In **Pipeline Section** in the end of the page choose **Pipeline script from SCM
 `Make sure you choose the right branch and the right path of the Jenkinsfile`
 
 ---
-
+## Step 6: 
+### Access your web_app 
+```bash
+# Access your web_app using the EC2 IPv4-Public-DNS:5000s
+```
+---
