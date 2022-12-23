@@ -51,6 +51,6 @@ In **Pipeline Section** in the end of the page choose **Pipeline script from SCM
 ## Step 6: 
 ### Access your web_app 
 ```bash
-# Access your web_app using the EC2 IPv4-Public-DNS:5000s
+# Access your web_app using the EC2 IPv4-Public-DNS:5000
 ```
 ---
