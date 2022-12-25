@@ -24,6 +24,7 @@ docker run -d -p 8080:8080 \
 --name Jenkins \
 [your_image_name]
 ```
+---
 ## Step 3:
 ### Setup Jenkins
 ```bash
@@ -54,5 +55,4 @@ In **Pipeline Section** in the end of the page choose **Pipeline script from SCM
 # Access your web_app using the EC2 IPv4-Public-DNS:5000
 ```
 ---
-
 ![image](https://user-images.githubusercontent.com/111642557/209469024-15a28279-626d-441a-99e1-2ff1588deacb.png)
